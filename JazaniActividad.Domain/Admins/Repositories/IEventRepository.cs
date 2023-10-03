@@ -11,6 +11,6 @@ namespace JazaniActividad.Domain.Admins.Repositories
     {
         Task<IReadOnlyList<Event>> FindAllAsync();
         Task<Event?> FindByIdAsync(int id);
-        Task<Currency?> SaveAsync(Currency currency);
+        Task<Event?> SaveAsync(Event currency);
     }
 }

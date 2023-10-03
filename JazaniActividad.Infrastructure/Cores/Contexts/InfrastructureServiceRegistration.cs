@@ -20,6 +20,7 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
 
 
             services.AddTransient<ICurrencyRepository, CurrencyRepository>();
+            services.AddTransient<IEventRepository, EventRepository>();
 
             return services;
         }

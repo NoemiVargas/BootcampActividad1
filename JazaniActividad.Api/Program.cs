@@ -1,11 +1,5 @@
-using JazaniActividad.Application.Admins.Dtos.Currencies.Mappers;
-using JazaniActividad.Application.Admins.Services;
-using JazaniActividad.Application.Admins.Services.Implementations;
-
-using JazaniActividad.Infrastructure.Admins.Persistences;
+using JazaniActividad.Application.Cores.Contexts;
 using JazaniActividad.Infrastructure.Cores.Contexts;
-using JazaniActividad.Application.Cores.Contexts;
-using JazaniActividad.Application.Cores.Contexts;
 
 
 
@@ -25,7 +19,6 @@ builder.Services.addInfrastructureServices(builder.Configuration);
 
 
 //Applications
-//builder.Services.AddTransient<ICurrencyService, CurrencyService>();
 builder.Services.AddApplicationServices();
 
 

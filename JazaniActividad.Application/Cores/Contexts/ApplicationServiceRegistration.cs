@@ -14,6 +14,7 @@ namespace JazaniActividad.Application.Cores.Contexts
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddTransient<ICurrencyService, CurrencyService>();
+            services.AddTransient<IEventService, EventService>();
             return services;
         }
     }

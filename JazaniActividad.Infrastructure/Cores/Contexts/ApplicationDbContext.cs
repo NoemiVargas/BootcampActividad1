@@ -16,12 +16,14 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
 
         #region "DbSet"
         public DbSet<Currency> Currency { get; set; }
+        public DbSet<Event> Event { get; set; }
 
         #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new CurrencyConfiguration());
+            modelBuilder.ApplyConfiguration(new EventConfiguration());
         }
 
     }
