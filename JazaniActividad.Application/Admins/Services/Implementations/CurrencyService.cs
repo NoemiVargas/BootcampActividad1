@@ -18,11 +18,6 @@ namespace JazaniActividad.Application.Admins.Services.Implementations
 
         }
 
-       /* public Task<CurrencyDto> DeleteAsync(int id)
-        {
-            throw new NotImplementedException();
-        }*/
-
         public async Task<IReadOnlyList<CurrencyDto>> FindAllAsync()
         {
             IReadOnlyList<Currency> currencies = await _currencyRepository.FindAllAsync();
@@ -51,7 +46,7 @@ namespace JazaniActividad.Application.Admins.Services.Implementations
         {
             Currency currency = await _currencyRepository.FindByIdAsync(id);
 
-           _mapper.Map<CurrencySaveDto>(currencySaveDto);
+           _mapper.Map<CurrencySaveDto, Currency>(currencySaveDto, currency);
 
             Currency currencySaved = await _currencyRepository.SaveAsync(currency);
 
@@ -67,15 +62,6 @@ namespace JazaniActividad.Application.Admins.Services.Implementations
             Currency currencySaved = await _currencyRepository.SaveAsync(currency);
             return _mapper.Map<CurrencyDto>(currencySaved);
 
-        }
-
-        public Task<CurrencyDto> DeleteAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
-
- 
+        } 
     }
-
-
 }

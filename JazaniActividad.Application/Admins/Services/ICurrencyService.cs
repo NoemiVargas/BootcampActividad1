@@ -10,6 +10,5 @@ namespace JazaniActividad.Application.Admins.Services
         Task<CurrencyDto> CreateAsync(CurrencySaveDto currencySaveDto);
         Task<CurrencyDto> EditAsync(int id, CurrencySaveDto currencySaveDto);
         Task<CurrencyDto> DisabledAsync(int id);
-        Task<CurrencyDto> DeleteAsync(int id);
     }
 }

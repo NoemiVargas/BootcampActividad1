@@ -7,7 +7,7 @@ namespace JazaniActividad.Application.Admins.Dtos.Currencies.Mappers
     {
         public CurrencySaveMapper() 
         {
-            CreateMap<Currency, CurrencySaveDto>();
+            CreateMap<Currency, CurrencySaveDto>().ReverseMap();
         }
     }
 }
