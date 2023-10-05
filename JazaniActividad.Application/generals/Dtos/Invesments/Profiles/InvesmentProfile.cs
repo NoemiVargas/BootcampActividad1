@@ -8,7 +8,7 @@ namespace JazaniActividad.Application.Generals.Dtos.Invesments.Profiles
         public InvesmentProfile() {
 
             CreateMap<Invesment, InvesmentDto>();
-            CreateMap<Invesment, InvesmentDto>().ReverseMap();
+            CreateMap<Invesment, InvesmentSaveDto>().ReverseMap();
         }
     }
 }

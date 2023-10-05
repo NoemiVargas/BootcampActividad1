@@ -10,6 +10,7 @@ namespace JazaniActividad.Domain.Generals.Models
         public string? Description { get; set; }
         public int MiningConcessionId {  get; set; }
         public int Invesmenttypeid { get; set; }
+        public int CurrencyTypeId { get; set; }
         public int? PeriodTypeid{ get; set; }
         public int? MeasureUnitId { get; set; }
         public DateTime RegistrationDate { get; set; }

@@ -7,7 +7,7 @@ namespace JazaniActividad.Application.Generals.Dtos.Invesmenttypes.Profiles
     {
        public InvesmenttypeProfile() {
             CreateMap<Invesmenttype, InvesmenttypeDto>();
-            CreateMap<Invesmenttype, InvesmenttypeDto>().ReverseMap();
+            CreateMap<Invesmenttype, InvesmenttypeSaveDto>().ReverseMap();
         }
     }
 }
