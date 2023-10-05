@@ -1,5 +1,7 @@
 ﻿using JazaniActividad.Domain.Admins.Repositories;
+using JazaniActividad.Domain.Generals.Repositories;
 using JazaniActividad.Infrastructure.Admins.Persistences;
+using JazaniActividad.Infrastructure.Generals.Persistences;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +23,8 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
 
             services.AddTransient<ICurrencyRepository, CurrencyRepository>();
             services.AddTransient<IEventRepository, EventRepository>();
+            services.AddTransient<IInvesmentRepository,InvesmentRepository>();
+            services.AddTransient<IInvesmenttypeRepository, InvesmenttypeRepository>();
 
             return services;
         }

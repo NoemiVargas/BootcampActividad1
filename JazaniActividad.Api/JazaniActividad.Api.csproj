@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Generals\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\JazaniActividad.Application\JazaniActividad.Application.csproj" />
     <ProjectReference Include="..\JazaniActividad.Infrastructure\JazaniActividad.Infrastructure.csproj" />
   </ItemGroup>
