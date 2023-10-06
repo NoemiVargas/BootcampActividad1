@@ -2,46 +2,16 @@
 using JazaniActividad.Domain.Admins.Models;
 using JazaniActividad.Domain.Admins.Repositories;
 using JazaniActividad.Infrastructure.Cores.Contexts;
+using JazaniActividad.Infrastructure.Cores.Persistences;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace JazaniActividad.Infrastructure.Admins.Persistences
 {
-    public class EventRepository:IEventRepository
+    public class EventRepository : CrudRepository<Event, int>, IEventRepository
     {
-
-        private readonly ApplicationDbContext _dbContext;
-
-        public EventRepository(ApplicationDbContext dbContext)
+        public EventRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
-            _dbContext = dbContext;
-
         }
-
-        public async Task<IReadOnlyList<Event>> FindAllAsync()
-        {
-            return  await _dbContext.Event.ToListAsync();
-
-        }
-
-        public async Task<Event?> FindByIdAsync(int id)
-        {
-            return  await _dbContext.Event.FirstOrDefaultAsync(Event => Event.Id == id);
-        }
-
-        public async Task<Event?> SaveAsync(Event Event)
-        {
-            EntityState state = _dbContext.Entry(Event).State;
-            _ = state switch
-            {
-                EntityState.Detached => _dbContext.Event.Add(Event),
-                EntityState.Modified => _dbContext.Event.Update(Event)
-            };
-
-            await _dbContext.SaveChangesAsync();
-            return Event;
-        }
-
-
     }
 }
