@@ -1,12 +1,11 @@
-﻿using JazaniActividad.Domain.Generals.Models;
+﻿using JazaniActividad.Domain.Admins.Models;
+using JazaniActividad.Domain.Cores.Repositories;
+using JazaniActividad.Domain.Generals.Models;
 
 
 namespace JazaniActividad.Domain.Generals.Repositories
 {
-    public interface IInvesmentRepository
+    public interface IInvesmentRepository : ICrudRepository<Invesment, int>
     {
-        Task<IReadOnlyList<Invesment>> FindAllAsync();
-        Task<Invesment?> FindByIdAsync(int id);
-        Task<Invesment?> SaveAsync(Invesment invesment);
     }
 }

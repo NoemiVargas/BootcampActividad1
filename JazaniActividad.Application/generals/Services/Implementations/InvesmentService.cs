@@ -25,6 +25,8 @@ namespace JazaniActividad.Application.Generals.Services.Implementations
         public async Task<InvesmentDto> CreateAsync(InvesmentSaveDto saveDto)
         {
             Invesment invesmenttype = _mapper.Map<Invesment>(saveDto);
+            invesmenttype.RegistrationDate = DateTime.Now;
+            invesmenttype.State = true;
             await _invesmentRepository.SaveAsync(invesmenttype);
             return _mapper.Map<InvesmentDto>(invesmenttype);
 
@@ -32,11 +34,11 @@ namespace JazaniActividad.Application.Generals.Services.Implementations
 
         public async Task<InvesmentDto> DisabledAsync(int id)
         {
-            Invesment invesmenttype = await _invesmentRepository.FindByIdAsync(id);
-            invesmenttype.State = false;
+            Invesment investment = await _invesmentRepository.FindByIdAsync(id);
+            investment.State = false;
 
-            await _invesmentRepository.SaveAsync(invesmenttype);
-            return _mapper.Map<InvesmentDto>(invesmenttype);
+            Invesment investmentSaved = await _invesmentRepository.SaveAsync(investment);
+            return _mapper.Map<InvesmentDto>(investmentSaved);
 
         }
 

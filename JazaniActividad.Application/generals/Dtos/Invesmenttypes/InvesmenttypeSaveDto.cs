@@ -10,6 +10,5 @@ namespace JazaniActividad.Application.Generals.Dtos.Invesmenttypes
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Registrationdate { get; set; }
     }
 }

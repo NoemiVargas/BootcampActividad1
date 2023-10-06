@@ -19,7 +19,7 @@ namespace JazaniActividad.Infrastructure.Generals.Configurations
                 dateTimeOffset => dateTimeOffset.DateTime
                 );
 
-            builder.ToTable("investmenttypetype", "mc");
+            builder.ToTable("investmenttype", "mc");
             builder.HasKey(invesmenttype => invesmenttype.Id);
             builder.Property(invesmenttype => invesmenttype.Name).HasColumnName("name");
             builder.Property(invesmenttype => invesmenttype.Description).HasColumnName("description");

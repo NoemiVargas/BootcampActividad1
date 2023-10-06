@@ -11,7 +11,7 @@ namespace JazaniActividad.Application.Generals.Dtos.Invesmenttypes
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Registrationdate { get; set; }
+        public DateTime Registrationdate { get; set; }
         public bool State { get; set; }
     }
 }

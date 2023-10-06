@@ -19,6 +19,9 @@ namespace JazaniActividad.Application.Generals.Services.Implementations
         public async Task<InvesmenttypeDto> CreateAsync(InvesmenttypeSaveDto saveDto)
         {
             Invesmenttype invesmenttype = _mapper.Map<Invesmenttype>(saveDto);
+            invesmenttype.RegistrationDate = DateTime.Now;
+            invesmenttype.State = true;
+
             await _invesmenttypeRepository.SaveAsync(invesmenttype);
             return _mapper.Map<InvesmenttypeDto>(invesmenttype);
 
@@ -29,15 +32,15 @@ namespace JazaniActividad.Application.Generals.Services.Implementations
             Invesmenttype invesmenttype = await _invesmenttypeRepository.FindByIdAsync(id);
             invesmenttype.State = false;
 
-            await _invesmenttypeRepository.SaveAsync(invesmenttype);
-            return _mapper.Map<InvesmenttypeDto>(invesmenttype);
+            Invesmenttype invesmenttypeSaved = await _invesmenttypeRepository.SaveAsync(invesmenttype);
+            return _mapper.Map<InvesmenttypeDto>(invesmenttypeSaved);
 
         }
 
         public async Task<InvesmenttypeDto> EditAsync(int id, InvesmenttypeSaveDto saveDto)
         {
             Invesmenttype invesmenttype = await _invesmenttypeRepository.FindByIdAsync(id);
-            _mapper.Map<    InvesmenttypeSaveDto, Invesmenttype>(saveDto, invesmenttype);
+            _mapper.Map<InvesmenttypeSaveDto, Invesmenttype>(saveDto, invesmenttype);
                     
             await _invesmenttypeRepository.SaveAsync(invesmenttype);
 
