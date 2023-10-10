@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using JazaniActividad.Application.Generals.Dtos.Invesmenttypes;
+using JazaniActividad.Domain.Generals.Models;
+
 
 namespace JazaniActividad.Application.Generals.Dtos.InvestmentConcepts.Profiles
 {
-    public class InvestmentConceptProfile
+    public class InvestmentConceptProfile : Profile
     {
+        public InvestmentConceptProfile() 
+        {
+            CreateMap<InvestmentConcept, InvestmentConceptDto>();
+            CreateMap<InvestmentConcept, InvesmenttypeSaveDto>().ReverseMap();
+
+        }
     }
 }

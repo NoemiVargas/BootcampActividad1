@@ -25,6 +25,7 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
             services.AddTransient<IEventRepository, EventRepository>();
             services.AddTransient<IInvesmentRepository,InvesmentRepository>();
             services.AddTransient<IInvesmenttypeRepository, InvesmenttypeRepository>();
+            services.AddTransient<IMeasureUnitRepository, MeasureUnitRepository>();
 
             return services;
         }

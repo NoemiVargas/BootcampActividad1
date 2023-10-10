@@ -1,8 +1,8 @@
 ﻿
 
-namespace JazaniActividad.Domain.Generals.Models
+namespace JazaniActividad.Application.Generals.Dtos.PeriodTypes
 {
-    public class PeriodType
+    public class PeriodTypeDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -10,7 +10,5 @@ namespace JazaniActividad.Domain.Generals.Models
         public int Time { get; set; }
         public int RegistrationDate { get; set; }
         public bool State { get; set; }
-
-        public ICollection<Invesment> Invesments { get; set; }
     }
 }

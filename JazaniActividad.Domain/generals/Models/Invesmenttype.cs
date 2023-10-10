@@ -14,5 +14,8 @@ namespace JazaniActividad.Domain.Generals.Models
         public DateTime RegistrationDate { get; set; }
         public bool State { get; set; }
 
+
+        public ICollection<Invesment> Invesments { get; set; }
+
     }
 }

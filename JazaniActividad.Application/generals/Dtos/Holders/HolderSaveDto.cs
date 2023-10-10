@@ -1,8 +1,12 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace JazaniActividad.Domain.Generals.Models
+namespace JazaniActividad.Application.Generals.Dtos.Holders
 {
-    public class Holder
+    public class HolderSaveDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -21,7 +25,6 @@ namespace JazaniActividad.Domain.Generals.Models
         public int HolderRegimeId { get; set; }
         public int HolderGroupId { get; set; }
 
-
         public int RegistryOfficeId { get; set; }
         public int IdentificationDocumentId { get; set; }
         public int? NationalityId { get; set; }
@@ -37,12 +40,5 @@ namespace JazaniActividad.Domain.Generals.Models
         public int? HolderCategoryId { get; set; }
         public bool? Isexternal { get; set; }
         public string? IngemmetName { get; set; }
-
-
-
-        public ICollection<Invesment> Invesments { get; set; }
-
-
-
     }
 }

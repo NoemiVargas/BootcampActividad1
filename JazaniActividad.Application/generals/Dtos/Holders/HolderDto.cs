@@ -1,8 +1,7 @@
 ﻿
-
-namespace JazaniActividad.Domain.Generals.Models
+namespace JazaniActividad.Application.Generals.Dtos.Holders
 {
-    public class Holder
+    public class HolderDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -37,12 +36,5 @@ namespace JazaniActividad.Domain.Generals.Models
         public int? HolderCategoryId { get; set; }
         public bool? Isexternal { get; set; }
         public string? IngemmetName { get; set; }
-
-
-
-        public ICollection<Invesment> Invesments { get; set; }
-
-
-
     }
 }

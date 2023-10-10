@@ -20,6 +20,11 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
  
         public DbSet<Currency> Currency { get; set; }
         public DbSet<Event> Event { get; set; }
+        public DbSet<MeasureUnit> MeasureUnit { get; set; }
+        public DbSet<MiningConcession> MiningConcession { get; set; }
+        public DbSet<Holder> Holder { get; set; }
+        public DbSet<InvestmentConcept> InvestmentConcept { get; set; }
+        public DbSet<PeriodType> PeriodType { get; set; }
 
         #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -30,6 +35,12 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
 
             modelBuilder.ApplyConfiguration(new InvesmentConfiguration());
             modelBuilder.ApplyConfiguration(new InvesmenttypetypeConfiguration());
+            modelBuilder.ApplyConfiguration(new HolderConfiguration());
+            modelBuilder.ApplyConfiguration(new InvestmentConceptConfiguration());
+            modelBuilder.ApplyConfiguration(new MeasureUnitConfiguration());
+            modelBuilder.ApplyConfiguration(new MiningConcessionConfiguration());
+            modelBuilder.ApplyConfiguration(new PeriodTypeConfiguration());
+
         }
 
     }

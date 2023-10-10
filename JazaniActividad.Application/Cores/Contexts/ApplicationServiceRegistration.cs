@@ -19,6 +19,7 @@ namespace JazaniActividad.Application.Cores.Contexts
             services.AddTransient<IEventService, EventService>();
             services.AddTransient<IInvesmenttypeService, InvesmenttypeService>();
             services.AddTransient<IInvesmentService, InvesmentService>();
+            services.AddTransient<IMeasureUnitService, MeasureUnitService>();
             return services;
         }
     }

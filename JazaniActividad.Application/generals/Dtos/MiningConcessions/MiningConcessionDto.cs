@@ -1,13 +1,13 @@
 ﻿
 
-namespace JazaniActividad.Domain.Generals.Models
+namespace JazaniActividad.Application.Generals.Dtos.MiningConcessions
 {
-    public class MiningConcession
+    public class MiningConcessionDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public int  RegistrationDate { get; set; }
+        public int RegistrationDate { get; set; }
         public bool? State { get; set; }
         public string? Code { get; set; }
         public string? Observation { get; set; }
@@ -18,7 +18,5 @@ namespace JazaniActividad.Domain.Generals.Models
         public int MiningUnitId { get; set; }
         public int ConditionId { get; set; }
         public int StateManagementId { get; set; }
-
-        public ICollection<Invesment> Invesments { get; set; }
     }
 }
