@@ -29,7 +29,7 @@ namespace JazaniActividad.Infrastructure.Generals.Configurations
             builder.Property(invesment => invesment.PeriodTypeid).HasColumnName("periodtypeid");
             
             builder.Property(invesment => invesment.RegistrationDate)
-                .HasColumnName("registrationDate")
+                .HasColumnName("registrationdate")
                 .HasConversion(toDateTime);
             builder.Property(invesment => invesment.State).HasColumnName("state");
             builder.Property(invesment => invesment.MonthName).HasColumnName("monthname");

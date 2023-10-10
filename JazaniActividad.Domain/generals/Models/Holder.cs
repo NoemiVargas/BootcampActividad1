@@ -32,7 +32,7 @@ namespace JazaniActividad.Domain.Generals.Models
         public int? RegismeDateStart { get; set; }
         public int? RegismeDateEnd { get; set; }
         public DateTimeOffset? RegimeNumberConstancy { get; set; }
-        public int RegistrationDate { get; set; }
+        public DateTime RegistrationDate { get; set; }
         public bool State { get; set; }
         public int? HolderCategoryId { get; set; }
         public bool? Isexternal { get; set; }
