@@ -5,7 +5,7 @@ using JazaniActividad.Domain.Generals.Models;
 
 namespace JazaniActividad.Domain.Generals.Repositories
 {
-    public interface IInvesmentRepository : ICrudRepository<Invesment, int>
+    public interface IInvesmentRepository : ICrudRepository<Invesment, int>, IPaginatedRepository<Invesment>
     {
     }
 }

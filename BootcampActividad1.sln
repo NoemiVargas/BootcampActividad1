@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34112.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.Api", "JazaniActividad.Api\JazaniActividad.Api.csproj", "{2CA7E23A-825E-4D2F-B274-DA1F8D0BA7EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Api", "JazaniActividad.Api\JazaniActividad.Api.csproj", "{2CA7E23A-825E-4D2F-B274-DA1F8D0BA7EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.Domain", "JazaniActividad.Domain\JazaniActividad.Domain.csproj", "{035BC9D0-A1F6-4120-9B10-81D4E4985B86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Domain", "JazaniActividad.Domain\JazaniActividad.Domain.csproj", "{035BC9D0-A1F6-4120-9B10-81D4E4985B86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.Infrastructure", "JazaniActividad.Infrastructure\JazaniActividad.Infrastructure.csproj", "{1838EE0D-D4AF-478A-86A8-3F61BCEFFCBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Infrastructure", "JazaniActividad.Infrastructure\JazaniActividad.Infrastructure.csproj", "{1838EE0D-D4AF-478A-86A8-3F61BCEFFCBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.Application", "JazaniActividad.Application\JazaniActividad.Application.csproj", "{B128FF4A-73DC-41ED-8BC4-F60C7700C842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Application", "JazaniActividad.Application\JazaniActividad.Application.csproj", "{B128FF4A-73DC-41ED-8BC4-F60C7700C842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.Core", "JazaniActividad.Core\JazaniActividad.Core.csproj", "{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B128FF4A-73DC-41ED-8BC4-F60C7700C842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B128FF4A-73DC-41ED-8BC4-F60C7700C842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B128FF4A-73DC-41ED-8BC4-F60C7700C842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,6 @@
 ﻿using JazaniActividad.Application.Admins.Dtos.Currencies;
+using JazaniActividad.Application.Cores.Services;
+using JazaniActividad.Application.generals.Dtos.Invesments;
 using JazaniActividad.Application.Generals.Dtos.Invesments;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace JazaniActividad.Application.Generals.Services
 {
-    public interface IInvesmentService
+    public interface IInvesmentService : IPaginatedService<InvesmentDto, InvesmentFilterDto>
     {
         Task<IReadOnlyList<InvesmentDto>> FindAllAsync();
         Task<InvesmentDto?> FindByIdAsync(int id);

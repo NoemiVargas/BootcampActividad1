@@ -1,6 +1,8 @@
 ﻿using JazaniActividad.Domain.Admins.Repositories;
+using JazaniActividad.Domain.Cores.Paginations;
 using JazaniActividad.Domain.Generals.Repositories;
 using JazaniActividad.Infrastructure.Admins.Persistences;
+using JazaniActividad.Infrastructure.Cores.Paginations;
 using JazaniActividad.Infrastructure.Generals.Persistences;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +28,8 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
             services.AddTransient<IInvesmentRepository,InvesmentRepository>();
             services.AddTransient<IInvesmenttypeRepository, InvesmenttypeRepository>();
             services.AddTransient<IMeasureUnitRepository, MeasureUnitRepository>();
+
+            services.AddTransient(typeof(IPaginator<>), typeof(Paginator<>));
 
             return services;
         }

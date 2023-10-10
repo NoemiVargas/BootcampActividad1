@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using JazaniActividad.Application.generals.Dtos.Invesments;
+using JazaniActividad.Core.Paginations;
 using JazaniActividad.Domain.Generals.Models;
 
 namespace JazaniActividad.Application.Generals.Dtos.Invesments.Profiles
@@ -9,6 +11,11 @@ namespace JazaniActividad.Application.Generals.Dtos.Invesments.Profiles
 
             CreateMap<Invesment, InvesmentDto>();
             CreateMap<Invesment, InvesmentSaveDto>().ReverseMap();
+            CreateMap<Invesment, InvesmentFilterDto>().ReverseMap();
+
+            CreateMap<ResponsePagination<Invesment>, ResponsePagination<InvesmentDto>>();
+            CreateMap<RequestPagination<Invesment>, RequestPagination<InvesmentFilterDto>>()
+                .ReverseMap();
         }
     }
 }

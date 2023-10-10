@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using JazaniActividad.Application.generals.Dtos.Invesments;
 using JazaniActividad.Application.Generals.Dtos.Invesments;
 using JazaniActividad.Application.Generals.Dtos.Invesments;
+using JazaniActividad.Core.Paginations;
 using JazaniActividad.Domain.Generals.Models;
 using JazaniActividad.Domain.Generals.Repositories;
 
@@ -59,6 +61,14 @@ namespace JazaniActividad.Application.Generals.Services.Implementations
         {
             Invesment invesmenttype = await _invesmentRepository.FindByIdAsync(id);
             return _mapper.Map<InvesmentDto?>(invesmenttype);
+        }
+
+        public async Task<ResponsePagination<InvesmentDto>> PaginatedSearch(RequestPagination<InvesmentFilterDto> request)
+        {
+            var entity = _mapper.Map<RequestPagination<Invesment>>(request);
+            var response = await _invesmentRepository.PaginatedSearch(entity);
+
+            return _mapper.Map<ResponsePagination<InvesmentDto>>(response);
         }
     }
 }

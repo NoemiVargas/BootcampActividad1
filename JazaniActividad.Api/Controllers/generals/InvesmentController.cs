@@ -1,7 +1,9 @@
-﻿using JazaniActividad.Application.Generals.Dtos.Invesments;
+﻿using JazaniActividad.Application.generals.Dtos.Invesments;
+using JazaniActividad.Application.Generals.Dtos.Invesments;
 using JazaniActividad.Application.Generals.Dtos.Invesmenttypes;
 using JazaniActividad.Application.Generals.Services;
 using JazaniActividad.Application.Generals.Services.Implementations;
+using JazaniActividad.Core.Paginations;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -53,6 +55,12 @@ namespace JazaniActividad.Api.Controllers.Generals
         public async Task<InvesmentDto> Delete(int id)
         {
             return await _invesmentService.DisabledAsync(id);
+        }
+
+        [HttpGet("PaginatedSearch")]
+        public async Task<ResponsePagination<InvesmentDto>> PaginatedSearch([FromQuery] RequestPagination<InvesmentFilterDto> request)
+        {
+            return await _invesmentService.PaginatedSearch(request);
         }
     }
 }

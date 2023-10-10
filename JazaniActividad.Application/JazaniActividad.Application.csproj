@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JazaniActividad.Core\JazaniActividad.Core.csproj" />
     <ProjectReference Include="..\JazaniActividad.Domain\JazaniActividad.Domain.csproj" />
   </ItemGroup>
 
