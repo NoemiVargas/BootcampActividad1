@@ -1,5 +1,7 @@
 ﻿using JazaniActividad.Application.Admins.Services;
 using JazaniActividad.Application.Admins.Services.Implementations;
+using JazaniActividad.Application.generals.Services;
+using JazaniActividad.Application.generals.Services.Implementations;
 using JazaniActividad.Application.Generals.Services;
 using JazaniActividad.Application.Generals.Services.Implementations;
 using JazaniActividad.Domain.Generals.Repositories;
@@ -20,6 +22,10 @@ namespace JazaniActividad.Application.Cores.Contexts
             services.AddTransient<IInvesmenttypeService, InvesmenttypeService>();
             services.AddTransient<IInvesmentService, InvesmentService>();
             services.AddTransient<IMeasureUnitService, MeasureUnitService>();
+            services.AddTransient<IHolderService, HolderService>();
+            services.AddTransient<IInvestmentConceptService, InvestmentConceptService>();
+            services.AddTransient<IMiningConcessionService, MiningConcessionService>();
+            services.AddTransient<IPeriodTypeService, PeriodTypeService>();
             return services;
         }
     }

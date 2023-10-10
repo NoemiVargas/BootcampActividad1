@@ -26,6 +26,15 @@ namespace JazaniActividad.Infrastructure.Generals.Configurations
                 .HasColumnName("registrationdate")
                 .HasConversion(toDateTime);
             builder.Property(holder => holder.State).HasColumnName("state");
+            builder.Property(holder => holder.CorporateEmail).HasColumnName("corporatemail");
+            builder.Property(holder => holder.DistricId).HasColumnName("districtid");
+            builder.Property(holder => holder.Maindenname).HasColumnName("maidenname");
+
+            builder.Property(holder => holder.RegismeDateEnd)
+                .HasColumnName("regimedateend");
+
+            builder.Property(holder => holder.RegismeDateStart)
+                .HasColumnName("regimedatestart");
 
         }
     }

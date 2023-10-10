@@ -28,6 +28,10 @@ namespace JazaniActividad.Infrastructure.Cores.Contexts
             services.AddTransient<IInvesmentRepository,InvesmentRepository>();
             services.AddTransient<IInvesmenttypeRepository, InvesmenttypeRepository>();
             services.AddTransient<IMeasureUnitRepository, MeasureUnitRepository>();
+            services.AddTransient<IHolderRepository, HolderRepository>();
+            services.AddTransient<IInvesmentConceptRepository, InvestmentConceptRepository>();
+            services.AddTransient<IMiningConcessionRepository, MiningConcessionRepository>();
+            services.AddTransient<IPeriodTypeRepository, PeriodTypeRepository>();
 
             services.AddTransient(typeof(IPaginator<>), typeof(Paginator<>));
 

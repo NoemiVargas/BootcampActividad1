@@ -20,7 +20,7 @@ namespace JazaniActividad.Infrastructure.Generals.Configurations
                 dateTimeOffset => dateTimeOffset.DateTime
                 );
 
-            builder.ToTable("periodtype", "mc");
+            builder.ToTable("periodtype", "ge");
             builder.HasKey(periodtype => periodtype.Id);
             builder.Property(periodtype => periodtype.Name).HasColumnName("name");
             builder.Property(periodtype => periodtype.Description).HasColumnName("description");
