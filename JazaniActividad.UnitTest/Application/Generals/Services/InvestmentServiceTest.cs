@@ -1,4 +1,5 @@
 ﻿using AutoFixture;
+using Xunit;
 using AutoMapper;
 using JazaniActividad.Application.Generals.Dtos.Invesments;
 using JazaniActividad.Application.Generals.Dtos.Invesments.Profiles;
@@ -7,7 +8,7 @@ using JazaniActividad.Application.Generals.Services.Implementations;
 using JazaniActividad.Domain.Generals.Models;
 using JazaniActividad.Domain.Generals.Repositories;
 using Moq;
-using Xunit;
+
 
 namespace JazaniActividad.UnitTest.Application.Generals.Services
 {
