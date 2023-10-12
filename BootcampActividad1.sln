@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Infrastruct
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Application", "JazaniActividad.Application\JazaniActividad.Application.csproj", "{B128FF4A-73DC-41ED-8BC4-F60C7700C842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.Core", "JazaniActividad.Core\JazaniActividad.Core.csproj", "{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JazaniActividad.Core", "JazaniActividad.Core\JazaniActividad.Core.csproj", "{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JazaniActividad.UnitTest", "JazaniActividad.UnitTest\JazaniActividad.UnitTest.csproj", "{808DAC5C-C09D-404A-91FB-A8B02A7F316B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78C82D4A-451B-4D6D-BE74-95AB273BA1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808DAC5C-C09D-404A-91FB-A8B02A7F316B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808DAC5C-C09D-404A-91FB-A8B02A7F316B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808DAC5C-C09D-404A-91FB-A8B02A7F316B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808DAC5C-C09D-404A-91FB-A8B02A7F316B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
